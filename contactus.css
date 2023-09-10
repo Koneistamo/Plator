@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:ital,wght@0,200;1,300&display=swap');
+</style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'poppins', sans-serif;
+}
+.sa{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Hero section*/
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2em 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+.hero img{
+    width: 100%;
+    height: auto;
+}
+.logo{
+    position: absolute;
+    width: 140px;
+    height: 120px;
+    top: 20px;
+    z-index: 1;
+    right: 20px;
+}
+.hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.5s;
+}
+.hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+.hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+
+.hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: white;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .3s;
+}
+
+/*End hero section*/
+
+/*Topbar*/
+.topbar {
+    background-color: transparent;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.topbar.scroll-bg {
+    background-color: rgba(0, 0, 0, 0.8); /* Change the background color as desired */
+}
+.topnav {
+    position: absolute;
+    top: 20px; /* Sijoita napit 20 pikseliä alas yläreunasta */
+    left: 20px; /* Sijoita napit 20 pikseliä oikealle reunasta */
+}
+
+.topnav {
+    margin: 5px;
+    padding: 30px 40px;
+    font-size: larger;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.topnav:hover {
+    color: black;
+}
+.topnav {
+    display: flex;
+    justify-content: center;
+}
+.topnav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 17px;
+}
+.topnav a:hover {
+    text-decoration: underline;
+}
+.mobile-icon {
+    cursor: pointer;
+    display: none;
+    size: 36px;
+}
+.mobile-icon {
+    position: absolute;
+    top: 28px; 
+    left: 27px; 
+    size: 36px;
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+@media screen and (max-width: 768px) {
+    .hero .topnav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      text-align: center;
+    }
+    .mobile-icon {
+      display: block;
+    }
+}
+/*Topbar*/
+.mobile-icon {
+    display: block; 
+    cursor: pointer;
+}
+.custom-nav {
+    display: none; 
+    background-color: #333;
+    position: absolute;
+    top: 0px; 
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.custom-nav a {
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.custom-nav a:hover {
+    background-color: #555;
+}
+.close-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    z-index: 2;
+}
+.mobile-icon {
+    cursor: pointer;
+}
+
+.mobile-icon.active .bar:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+}
+
+.mobile-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-icon.active .bar:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
+}
+.mobile-icon {
+    display: none;
+}
+
+/* Show the mobile icon only on screens with a maximum width of 768px (adjust as needed) */
+@media screen and (max-width: 768px) {
+    .mobile-icon {
+        display: block;
+    }
+}
+/*End of top bar*/
+
+/*Starter*/
+.starter-section {
+    height: 300px; /* Set the desired height */
+    background-image: url('images/tummatportaat.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  /* Overlay to darken the background image */
+  .background-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity as needed */
+  }
+  
+  /* Center the text in the middle of the section */
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  /* Style for the text */
+  .overlay h2 {
+    font-size: 5.0rem; /* Adjust the font size as needed */
+    font-style: oblique;
+  }
+
+
+  
+/*starter*/
+
+/*Title*/
+.title-section {
+    background-color: black; 
+    text-align: center;
+    padding: 50px 0; 
+}
+.title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+}
+.title-wrapper h2 {
+    font-size: 3.25rem; 
+    margin-bottom: 10px; 
+    color: gray;
+}
+.title-wrapper p {
+    font-size: 1.2rem; 
+    color: grey; 
+}  
+/*End of title*/
+
+/*Short text*/
+.contact-details {
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 3.7rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.section p {
+    font-size: 2.2rem;
+    line-height: 1.6;
+    color: gray;
+}
+/*End of short text*/
+
+/*Ceo section*/
+.ceo-section {
+    text-align: center; 
+    max-width: 800px; 
+    margin: 2rem auto; 
+}
+.ceo-section h2{
+    color: #fff;
+    font-size: 3.3rem;
+
+}
+.ceo-content{
+    position: absolute;
+    left: 40%;
+    transform: translate(-50%);
+
+}
+.ceo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ceo-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+.ceo-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ceo-details {
+    flex: 1; 
+    text-align: left; 
+}
+
+.ceo-details p {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    color: gray;
+}
+.ceo-section {
+    margin-bottom: 24rem;
+}
+
+/*End of ceo contacts*/
+
+/*Drop details*/
+.user-input-section {
+    max-width: 800px; 
+    margin: 2rem auto; 
+    text-align: center; 
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#user-contact-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.5rem;
+}
+.form-group label {
+    font-weight: bold;
+}
+
+#user-contact-form input,
+#user-contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#user-contact-form textarea {
+    resize: vertical;
+}
+
+#user-contact-form button {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#user-contact-form button:hover {
+    background-color: white;
+    color: black;
+}
+
+#submission-note {
+    color: red;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+@media (max-width: 768px) {
+    .form-group {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 1fr; 
+    }
+    .form-group{
+        display: below;
+        position: relative;
+        left: 50%;
+        transform: translate(-46%);
+    }
+    #user-contact-form input,
+    #user-contact-form textarea {
+        width: 90%;
+        padding: 0.5rem;
+        font-size: 0.9rem; 
+    }
+}
+@media (max-width: 768px) {
+    #user-contact-form button {
+        padding: 0.3rem 0.75rem; 
+        font-size: 1rem; 
+        width: 85%;
+        position: relative;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+/*End of drop details*/
+
+/* Footer */
+/* Style the white line */
+.white-line {
+    border: none;
+    border-top: 1px solid white; /* Adjust the border thickness as needed */
+  }
+  
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+.footer-social a {
+    margin: 0 10px;
+}
+.footer-social img {
+    width: 30px;
+    height: 30px;
+}
+.footer-powered {
+    margin-top: 20px;
+    font-size: 12px;
+}
+/* End Footer */
+
+/*Media quary*/
+@media (max-width: 768px) {
+
+
+
+
+
+

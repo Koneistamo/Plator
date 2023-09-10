@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widht=device-widht", initial-scale="1.0">
+    <title>Plator homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head> 
+<body>
+<!-- Hero section-->
+<section id="Hero"> 
+  <div class="hero">
+    <header class="topbar" id="topbar">
+      <nav class="topnav" id="topnav">
+        <a href="index.html">Home</a>
+        <a href="about us.html">Services</a>
+        <a href="contact us.html">Contact us</a>
+      </nav>
+      <div class="logo">
+        <img src="images/PlatorLogo_sivuittain kopio.jpeg" alt="Logo">
+      </div>
+      <div class="mobile-icon" onclick="toggleNav()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+       <nav class="custom-nav" id="custom-nav" style="display: none;">
+        <a href="index.html">Home</a>
+        <a href="about us.html">Services</a>
+        <a href="contact us.html">Contact us</a>
+    </header>
+  </div>
+</section>
+<script>
+  function toggleNav() {
+  var customNav = document.getElementById("custom-nav");
+  var mobileIcon = document.querySelector(".mobile-icon");
+
+  if (customNav.style.display === "block") {
+    customNav.style.display = "none";
+    mobileIcon.classList.remove("open");
+  } else {
+    customNav.style.display = "block";
+    mobileIcon.classList.add("open");
+  }
+}
+
+// Add an event listener to the document to close the navigation when clicking outside
+document.addEventListener("click", function (event) {
+  var customNav = document.getElementById("custom-nav");
+  var mobileIcon = document.querySelector(".mobile-icon");
+
+  if (!customNav.contains(event.target) && !mobileIcon.contains(event.target)) {
+    customNav.style.display = "none";
+    mobileIcon.classList.remove("open");
+  }
+});
+
+</script>
+<!--End hero section -->
+
+<!-- Opening Section -->
+<section id="Opening" class="opening-section">
+  <div class="opening-content">
+      <h1>Welcome to Plator</h1>
+      <p>In the home of the future!</p>
+  </div>
+</section>
+<!-- Opening Section -->
+
+<!--Preview-->
+<section id="Preview" class="preview-section">
+  <div class="preview-content">
+      <h2>Who we are?</h2>
+      <p>
+        Plator Ltd is a Finnish IT industry operator that provides high-quality it services across the board, for every business regardless of the industry
+      </p>
+  </div> 
+  <div class="preview-content">
+    <h2>How we differ from others?</h2>
+    <p>
+      Plator is dedicated to crafting and conceptualizing each project with individual attention to every client. Every project is a unique entity for us, embodying exceptional value. In contrast to traditional approaches, we bring innovative perspectives and unparalleled expertise to navigate the rapidly evolving landscape of digitalization.
+    </p>
+</div> 
+</div>
+</section>
+<!--Preview-->
+
+<!--boxes--> 
+<section class="expertise-section">
+  <h2 class="section-title">Our three areas of expertise</h2>
+<section class="boxes-container">
+  <div class="box">
+    <img src="images/office-605503_1280.jpg" alt="Image 1">
+    <div class="box-title">Websites</div>
+  </div>
+  <div class="box">
+    <img src="images/phone-292994_1280.jpg" alt="Image 2">
+    <div class="box-title">Applications</div>
+  </div>
+  <div class="box">
+    <img src="images/laptop-2620118_1280.jpg" alt="Image 4">
+    <div class="box-title">Softwares</div>
+  </div>
+</section>
+<!--End of boxes-->
+
+<!--Learn more-->
+<section class="learn-more-section">
+  <h2 class="section-subject">Learn More About our services!</h2>
+  <p>Find out more about us and our mission.</p>
+  <a href="about us.html" class="learn-more-button">Learn More</a>
+</section>
+<!--End fo learn more-->
+
+<!--Upcoming products-->
+<section id="products">
+  <h2 class="section-starter">Our products</h2>
+  <div class="product">
+    <a href="products.html"></a>
+    <img src="images/Plance.PNG" alt="Product 1">
+    <h3>Product 1</h3>
+    <p>Plance is software designed for professionals in the construction industry, with the aim of improving the operations of companies operating in the field.</p>
+  </div>
+
+  <div class="product">
+    <a href="Products.html"></a>
+    <img src="images/Plators Law.png" alt="Product 2">
+    <h3>Product 2</h3>
+    <p>Plators Law is a next-generation software tailored to assist attorneys in their daily activities, regardless of their area of expertise.</p>
+  </div>
+
+  <div class="product">
+    <a href="Products.html"></a>
+    <img src="images/WebLabs.png" alt="Product 3">
+    <h3>Product 3</h3>
+    <p>WebLabs is a front-line provider of new and innovative websites and applications, catering to every purpose.</p>
+  </div>
+</section>
+<!--End of Upcoming products-->
+
+<!--Contact us-->
+<section class="contact-section">
+  <h2 class="section-opener">Leave us a note!</h2>
+  <p>Drop your details and we'll get in touch with you.</p>
+  <div class="contact-form">
+    <form id="contact-form" action="process-form.php" method="post">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="submit-button" id="submit-button">Submit</button>
+      <div id="thank-you-message" style="display: none;">Thank you for your message!</div>
+    </form>
+  </div>
+</section>
+<!--End of contact us-->
+
+<!--Footer-->
+<footer class="footer">
+  <hr class="white-line">
+  <header class="topbeam" id="topbeam"></header>
+  <div class="footer-links">
+    <a href="Terms,Cookies,Privacy.Html">Privacy</a>
+    <a href="Terms,Cookies,Privacy.Html">Terms</a>
+    <a href="Terms,Cookies,Privacy.Html">Cookies</a>
+  </div>
+  <div class="footer-powered">
+    Powered by WebLabs
+  </div>
+</footer>
+<!--End of Footer-->
+
+</body>
+</html>

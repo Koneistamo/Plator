@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widht=device-widht", initial-scale="1.0">
+    <title>Plator Services</title>
+    <link rel="stylesheet" href="contactus.css">
+    <script src="script.js"></script>
+</head> 
+<body>
+<!-- Hero section-->
+<section id="Hero"> 
+  <div class="hero">
+    <header class="topbar" id="topbar">
+      <nav class="topnav" id="topnav">
+        <a href="index.html">Home</a>
+        <a href="about us.html">Services</a>
+        <a href="contact us.html">Contact us</a>
+      </nav>
+      <div class="logo">
+        <img src="images/PlatorLogo_sivuittain kopio.jpeg" alt="Logo">
+      </div>
+      <div class="mobile-icon" onclick="toggleNav()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+       <nav class="custom-nav" id="custom-nav" style="display: none;">
+        <a href="index.html">Home</a>
+        <a href="about us.html">Services</a>
+        <a href="contact us.html">Contact us</a>
+    </header>
+  </div>
+</section>
+<script>
+  function toggleNav() {
+  var customNav = document.getElementById("custom-nav");
+  var mobileIcon = document.querySelector(".mobile-icon");
+
+  if (customNav.style.display === "block") {
+    customNav.style.display = "none";
+    mobileIcon.classList.remove("open");
+  } else {
+    customNav.style.display = "block";
+    mobileIcon.classList.add("open");
+  }
+}
+
+// Add an event listener to the document to close the navigation when clicking outside
+document.addEventListener("click", function (event) {
+  var customNav = document.getElementById("custom-nav");
+  var mobileIcon = document.querySelector(".mobile-icon");
+
+  if (!customNav.contains(event.target) && !mobileIcon.contains(event.target)) {
+    customNav.style.display = "none";
+    mobileIcon.classList.remove("open");
+  }
+});
+
+</script>
+<!--End hero section -->
+
+<!--End hero section -->
+<section class="starter-section">
+  <div class="background-image">
+    <div class="overlay">
+      <h2>Contact Plator</h2>
+    </div>
+  </div>
+</section>
+<!--End hero section -->
+
+<!--Short text-->
+<section>
+<div class="contact-details">
+    <div class="section">
+        <h2 class="section-title">Thank you for your interest!</h2>
+        <p>At Plator, we can't wait to hear from you! <br>
+            Every customer is a new opportunity for us, <br>
+            which is why we want you to join us on this journey! <br>
+            Thank you for your interest!<br>
+           Plator Oy Ltd.</p>
+    </div>
+</section>
+<!--End of short text-->
+
+<!--Ceo Section-->
+<section name="ceo">
+    <div class="ceo-section">
+        <h2>Details</h2>
+        <div class="ceo-content">
+            <div class="ceo-image">
+                <img src="images/cv kuva kopio.jpeg" alt="CEO Image">
+            </div>
+            <div class="ceo-details">
+                <p><strong>Name:</strong> Kalle Laurikainen</p>
+                <p><strong>Title:</strong> CEO</p>
+                <p><strong>Email:</strong> kalle@plator.tech</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Of Ceo Section-->
+
+<!--Drop details-->
+<section>
+    <div class="user-input-section">
+        <h2 class="section-title">Leave Your Contact Information Here!</h2>
+        <form id="user-contact-form">
+            <div class="form-group">
+                <label for="user-name">Name:</label>
+                <input type="text" id="user-name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="user-email">Email:</label>
+                <input type="email" id="user-email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="user-phone">Phone Number:</label>
+                <input type="tel" id="user-phone" placeholder="Your Phone Number" required>
+            </div>
+            <div class="form-group">
+                <label for="user-message">Message:</label>
+                <textarea id="user-message" placeholder="Your Message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit Here</button>
+            <p id="submission-note"></p>
+        </form>
+    </div>    
+</section>
+<!--End Of drop details-->
+
+<!--Footer-->
+<footer class="footer">
+    <hr class="white-line">
+    <header class="topbeam" id="topbeam"></header>
+    <div class="footer-links">
+      <a href="Terms,Cookies,Privacy.Html">Privacy</a>
+      <a href="Terms,Cookies,Privacy.Html">Terms</a>
+      <a href="Terms,Cookies,Privacy.Html">Cookies</a>
+    </div>
+    <div class="footer-powered">
+      Powered by WebLabs
+    </div>
+  </footer>
+  <!-- End Footer -->
+  </body>
+  </html>

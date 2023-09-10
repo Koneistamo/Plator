@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widht=device-widht", initial-scale="1.0">
+    <title>Plator Services</title>
+    <link rel="stylesheet" href="aboutus.css">
+    <script src="script.js"></script>
+</head> 
+<body>
+<!-- Hero section-->
+<section id="Hero"> 
+  <div class="hero">
+    <header class="topbar" id="topbar">
+      <nav class="topnav" id="topnav">
+        <a href="index.html">Home</a>
+        <a href="about us.html">Services</a>
+        <a href="contact us.html">Contact us</a>
+      </nav>
+      <div class="logo">
+        <img src="images/PlatorLogo_sivuittain kopio.jpeg" alt="Logo">
+      </div>
+      <div class="mobile-icon" onclick="toggleNav()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+       <nav class="custom-nav" id="custom-nav" style="display: none;">
+        <a href="index.html">Home</a>
+        <a href="about us.html">Services</a>
+        <a href="contact us.html">Contact us</a>
+    </header>
+  </div>
+</section>
+<script>
+  function toggleNav() {
+  var customNav = document.getElementById("custom-nav");
+  var mobileIcon = document.querySelector(".mobile-icon");
+
+  if (customNav.style.display === "block") {
+    customNav.style.display = "none";
+    mobileIcon.classList.remove("open");
+  } else {
+    customNav.style.display = "block";
+    mobileIcon.classList.add("open");
+  }
+}
+
+// Add an event listener to the document to close the navigation when clicking outside
+document.addEventListener("click", function (event) {
+  var customNav = document.getElementById("custom-nav");
+  var mobileIcon = document.querySelector(".mobile-icon");
+
+  if (!customNav.contains(event.target) && !mobileIcon.contains(event.target)) {
+    customNav.style.display = "none";
+    mobileIcon.classList.remove("open");
+  }
+});
+</script>
+<!--End hero section -->
+
+<!--End hero section -->
+<section class="starter-section">
+  <div class="background-image">
+    <div class="overlay">
+      <h2>Plator Services</h2>
+    </div>
+  </div>
+</section>
+<!--End hero section -->
+
+<!--Title section-->
+<section class="title-section">
+  <div class="title-wrapper">
+    <h2>Our services</h2>
+    <p>Plator's service offering is extensive and continually evolving and expanding. <span></span></p>
+    <p>As a new company, Plator customizes its service offerings according to the customer's preferences.<span></span></p>
+  </div>
+</section>
+<!--End of title section-->
+
+<!--About us-->
+<section name="Aboutus">
+  <div class="about-row">
+    <div class="subject">
+      <img src="images/phone-292994_1280.jpg" alt="Subject Image 1">
+    </div>
+    <div class="text">
+      <h2>Applications</h2>
+      <p>Plator designs and develops applications for every purpose, from mobile phone applications to computers. If your company or any other organization needs or is considering application development, do not hesitate to get in touch!</p>
+    </div>
+  </div>
+  
+  <div class="about-row">
+    <div class="text">
+      <h2>Software development</h2>
+      <p>One of Plator's main areas of expertise is software development. Plator designs and implements customized software solutions to support and enhance businesses' operations.</p>
+    </div>
+    <div class="subject">
+      <img src="images/laptop-2620118_1280.jpg" alt="Subject Image 2">
+    </div>
+  </div>
+  
+  <div class="about-row">
+    <div class="subject">
+      <img src="images/office-605503_1280.jpg" alt="Subject Image 3">
+    </div>
+    <div class="text">
+      <h2>Websites</h2>
+      <p>Plator's subsidiary designs and develops websites exactly according to the client's preferences. WebLabs is a dynamic and customer-centric company, offering business models that surely provide a suitable solution for everyone.</p>
+    </div>
+  </div>
+
+  <div class="about-row">
+    <div class="text">
+      <h2>It support</h2>
+      <p>Plator also addresses companies' issues through IT support. IT support is an organized service delivered over the phone, designed to assist with acute problems related to workplace computers and devices.</p>
+    </div>
+    <div class="subject">
+      <img src="images/blogger-2838945_1280.jpg" alt="Subject Image 2">
+    </div>
+  </div>
+</section>
+<!--End of about us-->
+
+<!--Quate-->
+<section>
+<div class="quote-section">
+  <blockquote>
+      "The secret of success is to do the common thing uncommonly well."
+  </blockquote>
+  <p class="quote-attribution">- John D. Rockefeller Jr</p>
+</div>
+</section>
+<!--End of quate-->
+
+
+<!--Footer-->
+<footer class="footer">
+  <hr class="white-line">
+  <header class="topbeam" id="topbeam"></header>
+  <div class="footer-links">
+    <a href="Terms,Cookies,Privacy.Html">Privacy</a>
+    <a href="Terms,Cookies,Privacy.Html">Terms</a>
+    <a href="Terms,Cookies,Privacy.Html">Cookies</a>
+  </div>
+  <div class="footer-powered">
+    Powered by WebLabs
+  </div>
+</footer>
+<!-- End Footer -->
+</body>
+</html>
